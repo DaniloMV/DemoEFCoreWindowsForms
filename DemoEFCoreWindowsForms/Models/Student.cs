@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DemoEFCoreWindowsForms.Models
 {
-    //Esta clase nos va servir
+    //Esta clase nos va servir esta clase
     public class Student
     {
         public int Id { get; set; }

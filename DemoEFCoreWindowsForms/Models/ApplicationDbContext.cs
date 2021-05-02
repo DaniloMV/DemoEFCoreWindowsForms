@@ -15,7 +15,7 @@ namespace DemoEFCoreWindowsForms.Models
 	{
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=DemoWinForms2;Integrated Security=True")
+			optionsBuilder.UseSqlServer("Data Source=(localdb)\\ProjectsV13;Initial Catalog=DemoWinForms;Integrated Security=True")
 				.EnableSensitiveDataLogging(true)
 				.UseLoggerFactory(MyLoggerFactory);
 		}
@@ -29,6 +29,11 @@ namespace DemoEFCoreWindowsForms.Models
 			   .AddConsole();
 		});
 
+		/// <summary>
+		/// Indicarle a EntityFrameworkCore que vamos a tener una tabla en SqlServer
+		/// la cual nos va a comunicar a través de esta propiedad.
+		/// Adenás estamos indicando que esa tabla toará su forma a partir del modelo estudiante.
+		/// </summary>
 		public DbSet<Student> Students { get; set; }
 
 
